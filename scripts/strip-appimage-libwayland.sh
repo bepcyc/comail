@@ -5,7 +5,7 @@
 # libEGL_mesa.so.0 fails to load (undefined symbol wl_fixes_interface, wl_display_create_queue_with_name,
 # wl_display_dispatch_queue_timeout). WebKitWebProcess then aborts with
 # "Could not create default EGL display: EGL_BAD_PARAMETER" and the window stays blank.
-# See docs/issues/appimage-libwayland/README.md.
+# Context: bepcyc/comail pull request #1.
 # Usage: scripts/strip-appimage-libwayland.sh path/to/Comail_x.y.z_amd64.AppImage
 set -euo pipefail
 img=$(readlink -f "$1")
