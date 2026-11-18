@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Remove libwayland-* from the Linux AppImage after tauri-bundler built it.
 # Why: the AppImage's AppRun puts its own usr/lib first in LD_LIBRARY_PATH. The bundled
-# libwayland-client (from the ubuntu-22.04 build host) shadows the system one, so a newer Mesa's
+# libwayland-client shadows the system one, so a newer Mesa's
 # libEGL_mesa.so.0 fails to load (undefined symbol wl_fixes_interface, wl_display_create_queue_with_name,
 # wl_display_dispatch_queue_timeout). WebKitWebProcess then aborts with
 # "Could not create default EGL display: EGL_BAD_PARAMETER" and the window stays blank.
